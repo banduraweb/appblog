@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
+    "@types/node": "^13.7.7",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@zeit/next-typescript": "^1.1.1",
