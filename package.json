@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "lint": "eslint --ext .tsx,.js.,ts ../appblog --fix"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,12 @@
   },
   "homepage": "https://github.com/banduraweb/appblog#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "next": "^9.2.2",
+    "prettier": "^1.19.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
@@ -30,6 +36,8 @@
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@zeit/next-typescript": "^1.1.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
     "typescript": "^3.8.3"
   }
 }
