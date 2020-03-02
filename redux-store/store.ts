@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import axios from 'axios';
 import { PostType } from '../types/types';
 
-
 export const Start_InitialState = {
     posts: [] as Array<PostType>,
 };
@@ -15,12 +14,11 @@ export const SAVE_POSTS = 'SAVE_POSTS';
 export const DELETE_POST = 'DELETE_POST';
 
 export type SavePosts = {
-    type: typeof SAVE_POSTS
-    payload: Array<PostType>
-}
+    type: typeof SAVE_POSTS;
+    payload: Array<PostType>;
+};
 
-
-export type Action = SavePosts
+export type Action = SavePosts;
 
 export const savePosts = (posts: Array<PostType>): SavePosts => ({
     type: SAVE_POSTS,
