@@ -21,14 +21,22 @@
   },
   "homepage": "https://github.com/banduraweb/appblog#readme",
   "dependencies": {
+    "@types/react-redux": "^7.1.7",
+    "@types/redux": "^3.6.0",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
+    "axios": "^0.19.2",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "next": "^9.2.2",
+    "next-redux-wrapper": "^5.0.0",
     "prettier": "^1.19.1",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",

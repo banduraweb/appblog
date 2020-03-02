@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
-// import Link from 'next/link'
 
-export const IndexPage: FC = () => (
-    <>
-        <h1>Next with TypeScript</h1>
-    </>
-);
+import { Layout } from '../components/layout';
 
-export default IndexPage;
+const HomePage: FC = () => {
+    return (
+        <Layout title="About">
+            <h1>About service</h1>
+        </Layout>
+    );
+};
+
+export default HomePage;
