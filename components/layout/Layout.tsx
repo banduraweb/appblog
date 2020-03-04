@@ -2,10 +2,7 @@ import Head from 'next/head';
 import React, { Fragment, FC } from 'react';
 import Footer from './Footer';
 import Header from './Header';
-
-type LayoutProps = {
-    title: string;
-};
+import { LayoutProps } from '../../types/types';
 
 const Layout: FC<LayoutProps> = ({ title, children }) => {
     return (
@@ -17,9 +14,7 @@ const Layout: FC<LayoutProps> = ({ title, children }) => {
             </Head>
 
             <Header />
-
             {children}
-
             <Footer />
         </Fragment>
     );

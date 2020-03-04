@@ -13,8 +13,8 @@ const Header: FC = () => {
                     <a>Post's list</a>
                 </Link>{' '}
                 |{' '}
-                <Link href="/blog">
-                    <a>Blog</a>
+                <Link href="/post/create-post">
+                    <a>Create the post</a>
                 </Link>
             </nav>
         </header>

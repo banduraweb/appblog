@@ -3,17 +3,14 @@ import { NextPage } from 'next';
 import { Layout } from '../components/layout';
 import { fetchData } from '../redux-store/store';
 import Link from 'next/link';
-import { PostType } from '../types/types';
+import { PostsPageProps } from '../types/types';
 
-type PostsPageProps = {
-    payload: Array<PostType>;
-};
-const PostsPage: NextPage<PostsPageProps> = ({ payload }: PostsPageProps) => {
-
+const PostsPage: NextPage<PostsPageProps> = ({ postList }: PostsPageProps) => {
+    //  console.log(postList, 'postList');
     return (
         <Layout title="posts">
             <ul>
-                {payload.map(item => (
+                {postList.map(item => (
                     <li key={item.id}>
                         <Link href="/post/[id]" as={`/post/${item.id}`}>
                             <a>
@@ -28,9 +25,7 @@ const PostsPage: NextPage<PostsPageProps> = ({ payload }: PostsPageProps) => {
     );
 };
 
-
-
-
-PostsPage.getInitialProps = async ({ reduxStore }: any) => await reduxStore.dispatch(fetchData());
+PostsPage.getInitialProps = async ({ reduxStore }: any): Promise<PostsPageProps> =>
+    await reduxStore.dispatch(fetchData());
 
 export default PostsPage;
